@@ -1,0 +1,36 @@
+
+  .col-sm-6 .col-lg-3 .col-md-4 .col-xs-12{
+    padding:20px;
+    margin: 20px;
+  }
+
+
+  .ng-valid[required], .ng-valid.required  {
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-left: 10px solid rgb(218, 200, 43); /* yellow */
+}
+
+.ng-invalid:not(form)  {
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-left: 10px solid #e94646; /* red */
+}
+
+.backdrop {
+    background-color:rgba(0,0,0,0.6);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+}
+#vicky{
+  background-color: rgba(19, 192, 235, 0.8);
+  margin-left: 2px;
+  margin-top: 100px;
+  opacity: 0.9;
+ font-family: "Comic Sans MS", cursive, sans-serif;
+}

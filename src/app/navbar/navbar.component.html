@@ -1,0 +1,41 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" >
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/logo.jpg" width="50" height="50" >Native shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"routerLink="/checkout">Checkout</a>
+        </li>  
+ 
+        <div *ngIf="isUserLoggedOut && !isAdminLoggedIn">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+         </div>  
+         <div *ngIf="!isUserLoggedOut">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/userdashboard">My account</a>
+            </li>
+        </div>
+       
+        <div *ngIf="itemsSelected" >
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/cartpage">Cart</a>
+            </li>
+        </div>
+        <div *ngIf="isAdminLoggedIn">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/adminpage">My account</a>
+          </li>
+      </div>
+      </ul>
+    </div>
+  </nav>
+
+<br><br><br><br>

@@ -1,0 +1,112 @@
+<div>
+  <button class="btn btn-secondary" (click)="print()">Print</button>
+<div style="text-align: center;" id="print-section">
+  <h2 style="font-family: 'Spirax', cursive;">Invoice</h2>
+  <!-- head page -->
+    <div class="row">
+      <div class="col-3 col-md-6 col-lg-5 col-xs-6" style="font-family: 'Satisfy', cursive;">
+      <label>Invoice No:{{this.invno}}</label><br>
+      <label ng-app ng-controller="MethodName">
+       Date:{{date | date:'yyyy-MM-dd'}}
+      </label>
+      </div>
+      <div class="col-3 col-md-6 col-lg-5 col-xs-6">
+      <img src="assets/metaware_logo.png" alt="company logo" height="30px" width="180px">
+      </div>
+    </div>
+  <hr>
+  <!-- name and address of owner and customer -->
+    <div class="row"style="font-family: 'Satisfy', cursive;">
+        <div class="col-3 col-md-6 col-lg-5 col-xs-6">
+        <td>{{user.username}}</td><br>
+        <td>{{user.address}}</td><br>
+        <td>{{user.email}}</td><br>
+        <td>{{user.mobile_number}}</td>
+        </div>
+        <div class="col-sm-3 col-md-6 col-lg-5 col-xs-6">
+         <td>Mr.Ganesan</td><br>
+         <td>Kumaran st, Tirupur</td><br>
+         <td>ganesan@shine.com</td><br>
+         <td>0421-4204202</td><br>
+        </div>
+    </div>
+  <hr>
+  <!-- Products and details -->
+    <div style="font-family: 'Satisfy', cursive;">
+        <pre>
+          <table>
+            <tr>
+              <th>
+                S.No
+              </th>
+              <th>
+                Product Name
+              </th>
+              <th>
+                Quantity
+              </th>
+              <th>
+                Cost
+              </th>
+              <th>
+                Price
+              </th>
+            </tr>
+            <tr>
+              <td>
+               1
+              </td>
+              <td>
+                {{orderinfo.food_name}}
+              </td>
+              <td>
+                {{orderinfo.quantity}}
+              </td>
+              <td>
+                {{orderinfo.price}}
+              </td>
+              <td>
+                {{total}}
+              </td>
+            </tr>
+        <hr>
+              <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+                  Tax
+                </td>
+                <td>
+                  {{tax}}
+                </td>
+              </tr>
+              <hr>
+              <tr>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+
+                </td>
+                <td>
+                  Total price
+                </td>
+                <td>
+                {{grandtotal}}
+                </td>
+              </tr>
+      </table>
+    </pre>
+    </div>
+</div>
+</div>

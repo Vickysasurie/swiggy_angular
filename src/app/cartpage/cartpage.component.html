@@ -1,0 +1,33 @@
+<br><br><br>
+<div >
+  <h1>YOUR CART DETAILS BELOW:</h1>
+  <div>
+    Grand total: {{grandtotal}}
+  </div>
+        <table class="table table-bordered">
+                <thead>
+                  <tr><th>ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quatity</th>
+                    <th>Proider Details</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let list of response">
+                      <td>{{list.id}}</td>
+                      <td><img src="{{list.img}}" class="img-thumbnail" style="height:100px;" />
+                      </td><td>{{list.name}}</td>
+                      <td>{{list.price}}</td><td>
+                {{list.quantity}}</td><td>{{list.provider_address}}</td>
+                <button class="btn btn-outline-danger btn-sm" (click)="removeItem()">
+                  <span class="glyphicon glyphicon-remove"></span> Remove 
+                </button>
+              </tr></tbody></table>
+              
+</div>
+
+  <!-- add to order table -->
+  <div>
+    <button class="btn btn-outline-info" (click)="addCart()">Add to bill</button>
+  </div>

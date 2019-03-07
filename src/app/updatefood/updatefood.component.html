@@ -1,0 +1,98 @@
+<h1 style="text-align: center;"> Food Details</h1>
+                               
+                                 <div class="container">       
+                              
+                                      <table align="center" >
+                                <br>
+                                          <tr>
+                                           <td>Food Name :</td> <td><input type="text"required [(ngModel)]="updateFood.name" [ngModelOptions]="{standalone: true}" [value]="updateFood.name"> </td><br>
+                                          </tr>
+                                          <tr>
+                                           <td>Food Image :</td> <td><input type="text" required [(ngModel)]="updateFood.img" [ngModelOptions]="{standalone: true}"  [value]="updateFood.img"></td>
+                                           <button (click)="getimage()">Get Online</button>   <br>
+                                          </tr>
+                                          <tr>
+                                           <td>Food Category :  </td>
+                                           <td>
+                                          <select name="category" required [(ngModel)]="updateFood.category" [value]="updateFood.category">
+                                              <option value="South Indian">South Indian</option>
+                                              <option value="North Indian">North Indian</option>
+                                              <option value="Chinesse">Chinesse</option>
+                                              
+                                            </select>
+                                          </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Break Fast :</td>
+                                                  <td>
+                                                          <select name="choose" required [(ngModel)]="updateFood.breakfast" [value]="updateFood.breakfast">
+                                                              <option value=1>available</option>
+                                                              <option value=0>not available</option>                                                   
+                                                            </select>
+                                                          </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Lunch :</td>
+                                                              <td>
+                                                                      <select name="choose" required [(ngModel)]="updateFood.lunch" [value]="updateFood.lunch">
+                                                                          <option value=1>available</option>
+                                                                          <option value=0>not available</option>                                                   
+                                                                        </select>
+                                                                      </td>
+                                                            </tr>
+                                                            <tr>
+                                                                  <td>Dinner :</td>
+                                                                     <td>
+                                                                            <select name="choose" required [(ngModel)]="updateFood.dinner" [value]="updateFood.dinner">
+                                                                                      <option value=1>available</option>
+                                                                                      <option value=0>not available</option>                                                   
+                                                                                    </select>
+                                                                                  </td>
+                                                                                  </tr>
+                                                                                  
+                                               
+                                          <tr>
+                                           <td>Lat</td> <td><input type="number"  required [(ngModel)]="updateFood.lat" [ngModelOptions]="{standalone: true}"  [value]="updateFood.lat"></td><br>
+                                          </tr>
+                                          <tr>
+                                           <td>Lon:</td> <td><input type="number"  required [(ngModel)]="updateFood.lon" [ngModelOptions]="{standalone: true}"  [value]="updateFood.lon"></td><br>
+                                          </tr>
+                                          <tr>
+                                           <td>Zoom :</td> <td><input type="number" required [(ngModel)]="updateFood.zoom" [ngModelOptions]="{standalone: true}"  [value]="updateFood.zoom"></td><br>
+                                          </tr>
+                                          <tr>
+                                          <td>Ratings :</td> <td><input type="number"  required [(ngModel)]="updateFood.rating" [ngModelOptions]="{standalone: true}"  [value]="updateFood.rating"></td><br>
+                                          </tr>
+                                          <tr>
+                                           <td>Address :</td> <td><input type="text" required [(ngModel)]="updateFood.provider_address" [ngModelOptions]="{standalone: true}"  [value]="updateFood.provider_address"></td><br>
+                                          </tr>
+                                          <tr>
+                                           <td>Price :</td> <td><input type="number" required [(ngModel)]="updateFood.price" [ngModelOptions]="{standalone: true}"  [value]="updateFood.price"></td><br>
+                                          </tr>
+                                          <tr>
+                                           <td>Quantity:</td> <td><input type="number" required [(ngModel)]="updateFood.quantity" [ngModelOptions]="{standalone: true}"  [value]="updateFood.quantity"></td><br>
+                                          </tr>
+                                          
+                                          <tr>
+                                              <td>Available :</td> <td><input type="number" required [(ngModel)]="updateFood.available" [ngModelOptions]="{standalone: true}"  [value]="updateFood.available"></td><br>
+                                          </tr>
+                                                  
+                                          <tr>
+                                           <td>Tax :</td> <td><input type="number" required [(ngModel)]="updateFood.tax" [ngModelOptions]="{standalone: true}"  [value]="updateFood.tax"> </td><br>
+                                          </tr>
+                                           <tr>
+                                              <td>Provider Id :</td> <td><input type="number" required [(ngModel)]="updateFood.provider_id" [ngModelOptions]="{standalone: true}"  [value]="updateFood.provider_id"></td><br>
+                                          </tr>
+                                          <tr>
+                                            <td>Provider Name :</td> <td><input type="text" required [(ngModel)]="updateFood.provider_name" [ngModelOptions]="{standalone: true}"  [value]="updateFood.provider_name"></td><br>
+                                        </tr>
+                                          <!--
+                                          <tr>
+                                              <td>UpdatedAt :</td> <td><input type="text" required [(ngModel)]="providerDetails.updatedAt" [ngModelOptions]="{standalone: true}"></td><br>
+                                          </tr> -->
+                                          
+                                         </table>
+                                         <div style="text-align: center" >
+                                         <button type="button" (click)="update()" style="box-align:center;">Add</button>
+                                         </div>
+                                      </div>
